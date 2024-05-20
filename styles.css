@@ -1,0 +1,43 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .items {
+    display: flex;
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    margin-left: -10px; /* Убираем отступ слева */
+    margin-right: -10px; /* Убираем отступ справа */
+  }
+  
+  .item {
+    width: calc(33.33% - 20px); /* Рассчитываем ширину с учетом отступа между элементами */
+    margin: 0 10px 20px; /* Отступы между элементами и от низа */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .item:hover {
+    transform: scale(1.05); /* Немного увеличиваем размер элемента по наведению */
+    opacity: 85%;
+  }
+  
+  /* Для мобильных устройств до 425px */
+  @media (max-width: 425px) {
+    .items {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .item {
+      width: calc(100% - 20px); /* Рассчитываем ширину с учетом отступа между элементами */
+      margin: 0 10px 20px; /* Отступы между элементами и от низа */
+    }
+  }
+  
